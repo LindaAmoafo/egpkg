@@ -10,6 +10,39 @@ Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
 Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
+// ps_match1
+List ps_match1(const NumericVector& x);
+RcppExport SEXP _egpkg_ps_match1(SEXP xSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const NumericVector& >::type x(xSEXP);
+    rcpp_result_gen = Rcpp::wrap(ps_match1(x));
+    return rcpp_result_gen;
+END_RCPP
+}
+// ps_match2
+List ps_match2(const NumericVector& x);
+RcppExport SEXP _egpkg_ps_match2(SEXP xSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const NumericVector& >::type x(xSEXP);
+    rcpp_result_gen = Rcpp::wrap(ps_match2(x));
+    return rcpp_result_gen;
+END_RCPP
+}
+// ps_match3
+List ps_match3(const NumericVector& x);
+RcppExport SEXP _egpkg_ps_match3(SEXP xSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const NumericVector& >::type x(xSEXP);
+    rcpp_result_gen = Rcpp::wrap(ps_match3(x));
+    return rcpp_result_gen;
+END_RCPP
+}
 // rcpp_hello_world
 List rcpp_hello_world();
 RcppExport SEXP _egpkg_rcpp_hello_world() {
@@ -22,6 +55,9 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
+    {"_egpkg_ps_match1", (DL_FUNC) &_egpkg_ps_match1, 1},
+    {"_egpkg_ps_match2", (DL_FUNC) &_egpkg_ps_match2, 1},
+    {"_egpkg_ps_match3", (DL_FUNC) &_egpkg_ps_match3, 1},
     {"_egpkg_rcpp_hello_world", (DL_FUNC) &_egpkg_rcpp_hello_world, 0},
     {NULL, NULL, 0}
 };
